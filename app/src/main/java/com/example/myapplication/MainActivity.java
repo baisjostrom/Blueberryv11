@@ -13,6 +13,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     private TextView mTextMessage;
     private Button nextButton;
+    private Button exploringEncryptionB;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -23,21 +24,28 @@ public class MainActivity extends AppCompatActivity {
             nextButton = (Button) findViewById(R.id.next_button);
             nextButton.setVisibility(View.GONE);
 
+            exploringEncryptionB = findViewById(R.id.exploringEncryption_button);
+            exploringEncryptionB.setVisibility(View.GONE);
+
 
 
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     mTextMessage.setText(R.string.learn_test);
                     nextButton.setVisibility(View.GONE);
+                    exploringEncryptionB.setVisibility(View.VISIBLE);
+                    configureExploringEncryptionButton();
 
                     return true;
                 case R.id.navigation_dashboard:
                     mTextMessage.setText(R.string.title_dashboard);
                     nextButton.setVisibility(View.GONE);
+                    exploringEncryptionB.setVisibility(View.GONE);
                     return true;
                 case R.id.navigation_notifications:
                     mTextMessage.setText(R.string.title_notifications);
                     nextButton.setVisibility(View.VISIBLE);
+                    exploringEncryptionB.setVisibility(View.GONE);
                     configureNextButton();
                     return true;
             }
@@ -65,6 +73,16 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent (MainActivity.this, BNBActivity.class));
                 }
             });
+    }
+
+    public void configureExploringEncryptionButton() {
+        Button exploringExplorationB = findViewById(R.id.exploringEncryption_button);
+        exploringExplorationB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, exploringEncryption.class));
+            }
+        });
     }
     }
 

@@ -14,9 +14,9 @@ public class exploringEncryption extends AppCompatActivity {
         configureLearnBackButton();
     }
 
-    private void configureLearnBackButton() {
-        Button backButton = findViewById(R.id.backButton);
-        backButton.setOnClickListener(new View.OnClickListener() {
+    private void configureLearnBackButton(){
+        Button learnBackButton = findViewById(R.id.learnBack_button);
+        learnBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
