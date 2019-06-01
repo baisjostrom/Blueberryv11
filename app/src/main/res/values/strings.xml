@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Blueberry</string>
+    <string name="title_home">Learn</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">News</string>
+
+
+    <string name="learn_test">Learn Test!</string>
+
+    <string name="exploringEncryption">In cryptography, encryption is the process of encoding a message or information in such a way that only authorized parties can access it and those who are not authorized cannot. Explain how over time, different ciphers have been developed to help encode/decode messages confidential information, and how companies still use some of the more complex ciphers for secure communication.</string>
+</resources>
